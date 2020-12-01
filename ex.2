@@ -1,0 +1,17 @@
+z = float(input())
+def search(a):
+    l=0
+    r=len(a)-1
+    while l<=r:
+        m = (l + r) // 2
+        if (z<a[m]):
+          r=m-1
+        elif (z>a[m]):
+          l=m+1
+        else:
+          print(m)
+          break
+    else:
+      print("no")
+a=list(map(float,input().split()))
+search(a)
